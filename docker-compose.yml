@@ -1,0 +1,17 @@
+version: '3'
+services:
+  db:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: muhammadahmed
+      MONGO_INITDB_ROOT_PASSWORD: AMeg90C7Ze8hhKC6
+    ports:
+      - "27017:27017"
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      MONGO_URI: "mongodb+srv://muhammadahmed:AMeg90C7Ze8hhKC6@cluster0.iguhlhs.mongodb.net/?retryWrites=true&w=majority"
+    depends_on:
+      - db
