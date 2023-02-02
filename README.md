@@ -8,4 +8,4 @@ docker-compose up<br/>
 This will start the FastAPI application in a Docker container and make it accessible at http://localhost:8000 on your local machine.
 
 ##### Postman Collection is attached for testing routes:
-Directly import the postman_collection.json inside postman.
+Directly import the Elevatus Technical Assignment Collection.postman_collection inside postman.
