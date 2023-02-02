@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "6eafe540-7dd7-474d-97fa-d5846e58cba5",
+		"name": "Elevatus Technical Assignment Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User Endpoint",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"Muhammad\",\r\n    \"last_name\":\"Ahmed\",\r\n    \"email\":\"ahmedzahi@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/user/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Candidate Profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiYWhtZWR6YWhpZDIxMjEyMUBnbWFpbC5jb20iLCJleHBpcmVzIjoxNjc1MzY3ODI5Ljk5MDI2M30.i-erJLoBbocxz_Ej4VFdLlURLmtLVSQyjAxx9w2rVKA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"Muhammad\",\r\n    \"last_name\":\"Ahmed\",\r\n    \"email\":\"ahmedza11@gmail.com\",\r\n    \"career_level\":\"junior\",\r\n    \"job_major\":\"Science\",\r\n    \"years_of_experience\":\"8\",\r\n    \"degree_type\":\"Bachelor\",\r\n    \"skills\":[\"Python\"],\r\n    \"nationality\":\"pakistani\",\r\n    \"city\":\"Daska\",\r\n    \"salary\":\"5000\",\r\n    \"gender\":\"Male\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/candidate",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"candidate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign In User for Token Generation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/user/signin?first_name=Muhammad&last_name=Ahmed&email=ahmedzahid212121@gmail.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"signin"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Muhammad"
+						},
+						{
+							"key": "last_name",
+							"value": "Ahmed"
+						},
+						{
+							"key": "email",
+							"value": "ahmedzahid212121@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Candidate Profile",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiYWhtZWR6YWhpZDIxMjEyMUBnbWFpbC5jb20iLCJleHBpcmVzIjoxNjc1MzY5MTkwLjQzMTgwNH0.5DJROa5AvdCMySRmCrqCNiVsp1AooGd7QG_YAjRvzJk",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/candidate/63dc140c0b5c0caaa4018413",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"candidate",
+						"63dc140c0b5c0caaa4018413"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Candidate Profile",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiYWhtZWR6YWhpZDIxMjEyMUBnbWFpbC5jb20iLCJleHBpcmVzIjoxNjc1MzY5MTkwLjQzMTgwNH0.5DJROa5AvdCMySRmCrqCNiVsp1AooGd7QG_YAjRvzJk",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"Muhammad\",\r\n    \"last_name\":\"Ahmed\",\r\n    \"career_level\":\"Senior2.0\",\r\n    \"job_major\":\"Science\",\r\n    \"years_of_experience\":\"8\",\r\n    \"degree_type\":\"Bachelor\",\r\n    \"skills\":[\"Python\"],\r\n    \"nationality\":\"pakistani\",\r\n    \"city\":\"Daska\",\r\n    \"salary\":\"5000\",\r\n    \"gender\":\"Male\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/candidate/63dc140c0b5c0caaa4018413",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"candidate",
+						"63dc140c0b5c0caaa4018413"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Candidate Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiYWhtZWR6YWhpZDIxMjEyMUBnbWFpbC5jb20iLCJleHBpcmVzIjoxNjc1MzY5MTkwLjQzMTgwNH0.5DJROa5AvdCMySRmCrqCNiVsp1AooGd7QG_YAjRvzJk",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/candidate/63dc140c0b5c0caaa4018413",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"candidate",
+						"63dc140c0b5c0caaa4018413"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All Candidates",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYWhtZWR6YWhpZDIxMjEyMUBnbWFpbC5jb20iLCJleHBpcmVzIjoxNjc1MzcyNzg2LjY2MzMyNjd9.GXdM_LSDBRJYHOkqIO1tVGhwkb4K-olcLU2X8zg6V6E",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/all_candidates",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"all_candidates"
+					],
+					"query": [
+						{
+							"key": "years_of_experience",
+							"value": "8",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate CSV report",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYWhtZWR6YWhpZDIxMjEyMUBnbWFpbC5jb20iLCJleHBpcmVzIjoxNjc1MzcyNzg2LjY2MzMyNjd9.GXdM_LSDBRJYHOkqIO1tVGhwkb4K-olcLU2X8zg6V6E",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/generate_report",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"generate_report"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
