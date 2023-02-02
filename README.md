@@ -23,3 +23,14 @@ http://127.0.0.1:8000/generate_report (GET)<br/>
 These endpoints are protected with Authorization JWT token which is generated from below endpoint for new users.
 http://127.0.0.1:8000/user/signup {For user creation}<br/>
 http://127.0.0.1:8000/user/signin {For generating tokens}
+
+Here are some screenshots:
+
+![image](https://user-images.githubusercontent.com/54658973/216452873-0134e836-52d5-4a0e-a933-4031b1e0047a.png)
+
+
+#### Creation of New User
+
+![image](https://user-images.githubusercontent.com/54658973/216453112-c3b6dea5-18ea-44f7-b9a9-7837bb73ed76.png)
+#### Error If you create user with the same email address
+![image](https://user-images.githubusercontent.com/54658973/216453210-10e123ab-38d7-48e9-aa93-e81a4694a88f.png)
